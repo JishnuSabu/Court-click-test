@@ -14,7 +14,7 @@ The application features 7 pixel-perfect screens adhering to modern UI/UX princi
 | **2. Profile Switcher** | `MOCK` | "Who's Watching?" profile grid (Emenalo, Onyeka, Thelma, Kids, Add Profile). |
 | **3. Home Dashboard** | `API (TMDB)` | Featured Hero Banner, Previews rail, Continue Watching, Popular Movies, Trending Now, Top 10, My List. Handles loading, error & data states. |
 | **4. Search Screen** | `API (TMDB)` | Persistent search bar with live debounced TMDB search results. Handles empty, loading, no-results, and error states. |
-| **5. Coming Soon** | `API (TMDB)` | Upcoming movies feed from TMDB, Notifications section, release date badges, descriptions, genre pills, Remind Me & Share actions. |
+| **5. Coming Soon** | `API (TMDB)` | |
 | **6. Downloads** | `MOCK` | "Smart Downloads" toggle header, "Introducing Downloads For You" illustration, SET UP button, and browsing button. |
 | **7. More & Profile Settings** | `MOCK` | Profile header bar, Manage Profiles, Referral link box with "Copy Link" toast notification, social share icons (WhatsApp, Facebook, Gmail), My List, App Settings, Account, & Sign Out. |
 
@@ -49,6 +49,7 @@ lib/
 │   ├── trending_movies_model.dart
 │   ├── top_rated_movie_model.dart
 │   └── up_coming_movie_model.dart
+      ─ now_playing_movie_model.dart
 ├── screens/                # UI Screens
 │   ├── splash_screen.dart
 │   ├── profile_selection_screen.dart
@@ -88,7 +89,6 @@ lib/
 ### API-Driven Components (TheMovieDB REST API)
 - **`HomeScreen`**: Fetches live trending movies (`/trending/all/week`), popular movies (`/movie/popular`), now playing (`/movie/now_playing`), and top rated movies (`/movie/top_rated`).
 - **`SearchScreen`**: Fetches live search results from TMDB (`/search/movie`) debounced as the user types.
-- **`ComingSoonScreen`**: Fetches upcoming movie releases (`/movie/upcoming`) with backdrop posters and release dates.
 
 ### Mock-Driven Components
 - **`SplashScreen`**: Static animated Netflix logo branding.
